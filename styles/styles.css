@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --txt-font: 'Montserrat', sans-serif;
+    --txt-color: #152a45;
+    --vini-groen: #72afa6;
+    --vini-geel: #f4eb34;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: var(--txt-font);
+    font-weight: normal;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* Website achtergrond */
+body::after {
+    content: "";
+    background: url('../assets/bg.svg');
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: .4;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+.navigation-bar {
+    width: 100%;
+    position: relative;
+    overflow: auto;
+    background-color: transparent;
+    border-bottom: 2px solid var(--txt-color);
+}
+
+
+
+.navigation-bar .navigation-menu ul li {
+    list-style: none;
+}
+
+.navigation-menu {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-logo {
+    padding: 10px;
+}
+
+.navigation-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.navigation-items ul li a {
+    text-decoration: none;
+    color: var(--txt-color);
+}
+
+.navigation-items ul li a:visited {
+    color: var(--txt-color);
+}
+
+.navigation-items ul li a i {
+    font-size: 21px;
+}
+
+.navigation-items ul:nth-child(6) {
+    padding-right: 7em;
+}
+
+.navigation-items ul li a i,
+.navigation-items ul li a {
+    transition: .6s;
+}
+
+.navigation-items ul li a i:hover,
+.navigation-items ul li a:hover {
+    color: var(--vini-groen);
+    transition: .4s;
+}
+
+.navigation-items ul li a .fa-bars {
+    display: none;
+}
+
+.steps-advice {
+    padding: 2rem;
+    padding-top: 1.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    grid-template-rows: 1fr;
+}
+
+.steps-advice section {
+    /* background-color: red; */
+    width: 27em;
+    aspect-ratio: 2/.25;
+    border: 5px solid var(--vini-geel);
+    background-color: rgb(244, 235, 52, .3);
+    margin: auto;
+    color: black;
+    letter-spacing: 1px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 3px 0px 10px var(--vini-geel);
+    transition: .7s;
+}
+
+.steps-advice section:hover {
+    transform: scale(1.03);
+    transition: .7s;
+}
+
+.steps-advice section span {
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 1em;
+    border-right: 5px solid var(--vini-geel);
+    padding-right: 3;
+}
+
+.steps-advice section p {
+    padding-left: 1em;
+}
+
+.steps-advice section:nth-child(1),
+.steps-advice section:nth-child(3),
+.steps-advice section:nth-child(5) {
+    margin-right: 0;
+}
+
+.steps-advice section:nth-child(2),
+.steps-advice section:nth-child(4),
+.steps-advice section:nth-child(6) {
+    margin-left: 0;
+}
+
+.txt-more {
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-style: normal;
+    color: var(--txt-color);
+}
+
+.fa-calendar-days {
+    padding-left: 10px;
+    font-size: 21px;
+    transition: .4s;
+}
+
+.fa-calendar-days:hover {
+    color: var(--vini-groen);
+    transition: .4s;
+}
+
+.box-advice {
+    padding: 5rem;
+    padding-top: 1.5rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 30px;
+    grid-template-rows: 1fr;
+    /* background-color: red; */
+}
+
+.box-advice a{
+    color: var(--txt-color);
+    text-decoration: none;
+}
+
+.box-advice section {
+    width: 13em;
+    border-radius: 17.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    margin: auto;
+    text-align: center;
+    border: 5px solid var(--vini-groen);
+    height: auto;
+    aspect-ratio: 1/1;
+    background-color: rgb(114, 175, 166, .4);
+    box-shadow: 2px 0px 10px var(--vini-groen);
+    font-size: 1em;
+    transition: .4s;
+}
+
+.box-advice section:hover {
+    transform: scale(1.1);
+    transition: .4s;
+}
+
+/* Modal */
+.modal-box {
+    z-index: 3;
+    display: none;
+    /* padding-top: 100px; */
+    position: fixed;
+    vertical-align: center;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--txt-color);
+    background-color: rgba(21, 42, 69, .4);
+}
+
+.modal-content {
+    margin: auto;
+    position: relative;
+    padding: 0;
+    border: 10px solid var(--vini-groen);
+    outline: 0;
+    background-color: white;
+    width: 80vw;
+    aspect-ratio: 2/1;
+}
+
+.modal-content i {
+    font-size: 2.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    z-index: 30;
+    float: right;
+}
+
+.modal-content:after {
+    content: "";
+    background: url('../assets/bg.svg');
+    background-position: top left;
+    background-size: cover;
+    transform: scaleX(-1);
+    background-repeat: no-repeat;
+    opacity: .3;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: 11;
+}
+
+.modal-content div {
+    width: 100%;
+    height: 95%;
+    position: relative;
+    margin-top: auto;
+    z-index: 12;
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-content div section {
+    width: 50%;
+    height: 100%;
+}
+
+.modal-content div section h2 {
+    padding: 5rem 0px 0px 20px;
+    font-size: 2em;
+}
+
+.modal-content div section p {
+    padding: 5px 0px 0px 20px;
+}
+
+.modal-content div section:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.modal-content div section:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content div section:nth-child(2) img {
+    width: 90%;
+    height: auto;
+}
+
+@media (max-width: 1400px) {
+    .box-advice {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    body::after {
+        background-size: cover;
+        background-position: bottom;
+    }
+
+    body::after {
+        height: 123vh;
+        background-size: cover;
+    }
+
+    .navigation-items ul:nth-child(6) {
+        padding-right: 0;
+    }
+
+    .navigation-menu,
+    .navigation-items,
+    .navigation-items ul,
+    .navigation-items ul li,
+    .navigation-items ul li a,
+    .navigation-items ul li a i {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 1020px) {
+    .box-advice {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .steps-advice {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .steps-advice section:nth-child(1),
+    .steps-advice section:nth-child(3),
+    .steps-advice section:nth-child(5) {
+        margin-right: auto;
+    }
+
+    .steps-advice section:nth-child(2),
+    .steps-advice section:nth-child(4),
+    .steps-advice section:nth-child(6) {
+        margin-left: auto;
+    }
+
+    body::after {
+        height: 153vh;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .navigation-items ul:nth-child(1),
+    .navigation-items ul:nth-child(2),
+    .navigation-items ul:nth-child(3),
+    .navigation-items ul:nth-child(4),
+    .navigation-items ul:nth-child(5),
+    .navigation-items ul:nth-child(6), 
+    .navigation-items ul:nth-child(7),
+    .navigation-items ul:nth-child(8) {
+        display: none;
+    }
+
+    .navigation-items ul li a .fa-bars {
+        display: block !important;
+        float: right;
+        width: auto;
+        font-size: 25px;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 780px) {
+    .box-advice {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .steps-advice section {
+        width: 23rem;
+    }
+
+    body::after {
+        /* background: none; */
+        height: 215vh;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+@media (max-width: 550px) {
+    .box-advice {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .steps-advice section {
+        width: 20rem;
+    }
+
+    .steps-advice section p {
+        padding-left: .5em;
+        padding-right: .5em;
+    }
+}

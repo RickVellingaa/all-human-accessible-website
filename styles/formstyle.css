@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --txt-font: 'Montserrat', sans-serif;
+    --txt-color: #152a45;
+    --vini-groen: #72afa6;
+    --vini-geel: #f4eb34;
+}
+
+.form-container{
+    width: 360px;
+    aspect-ratio: 1/1.5;
+    margin: 8% auto;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 20px 10px rgb(0 0 0 / 40%);}
+
+h3{
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--vini-groen);
+}
+
+.form-container form{
+    width: 280px;
+    position: absolute;
+    left: 40px;
+    top: 100px;
+    transition: .5s;
+}
+
+form input{
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    border-bottom: 1px solid var(--txt-color);
+    outline: none;
+    background: transparent;
+}
+
+#form-three input{
+    padding: 10px 5px;
+    margin: 5px 0;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 1px solid var(--txt-color);
+    outline: none;
+    background: transparent;
+}
+
+#form-three section{
+    display: flex;
+    flex-direction: row;
+}
+
+
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background-color: var(--vini-groen);
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    font-family: var(--txt-font);
+}
+
+::placeholder{
+    color: var(--txt-color);
+    font-size: 1.2em;
+    font-family: var(--txt-font);
+}
+
+#form-two{
+    left: 450px;
+}
+
+#form-three{
+    left: 450px;
+}
+
+.step-row{
+    width: 360px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px -1px 5px 1px var(--txt-color);
+    position: relative;
+    border: none;
+    border-radius: 10px;
+    font-family: var(--txt-font);
+    outline: none;
+}
+
+.step-col{
+    width: 120px;
+    text-align: center;
+    color: var(--txt-color);
+    position: relative;
+}
+
+#progress-bar{
+    position: absolute;
+    height: 100%;
+    width: 120px;
+    background: var(--vini-geel);
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}

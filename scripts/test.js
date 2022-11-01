@@ -5,6 +5,8 @@ var Form3 = document.getElementById("form-three");
 var Form4 = document.getElementById("form-four");
 var Form5 = document.getElementById("form-five");
 var Form5A = document.getElementById("form-fiveA");
+var Form6 = document.getElementById("form-six");
+var Form6A = document.getElementById("form-sixA");
 
 // Vorige en volgende knoppen
 var Next1 = document.getElementById("nextstep-1");
@@ -16,6 +18,8 @@ var Back2 = document.getElementById("prevstep-2");
 var Back3 = document.getElementById("prevstep-3");
 var Back4 = document.getElementById("prevstep-4");
 var Back5 = document.getElementById("prevstep-5");
+var Back6 = document.getElementById("prevstep-6");
+var Back7 = document.getElementById("prevstep-7");
 
 // Progress bar
 var progressBar = document.getElementById("progress-bar");
@@ -31,7 +35,7 @@ var redirectFour = $('input[name="redirect4"]');
 // Voor het redirecten naar eczeem
 var redirectFive = $('input[name="redirect5"]');
 var redirectSix = $('input[name="redirect6"]');
-var redirectSeven= $('input[name="bbb"]');
+var redirectSeven= $('input[name="redirect7"]');
 
 
 Next1.onclick = function (){
@@ -74,6 +78,16 @@ Back5.onclick = function (){
   Form5A.style.left = "450px";
 }
 
+Back6.onclick = function (){
+  Form5.style.left = "40px";
+  Form6.style.left = "450px";
+}
+
+Back7.onclick = function (){
+  Form5A.style.left = "40px";
+  Form6A.style.left = "450px";
+}
+
 function redirectPage(){
     if ( redirectOne.is(':checked') ) {
         window.location.href="jong.html" ;
@@ -92,7 +106,8 @@ function redirectPageEczeem(){
   if ( redirectFive.is(':checked') ) {
       window.location.href="overleg.html" ;
   } else {
-    window.location.href="www.google.com" ;
+    Form5.style.left = "-450px";
+    Form6.style.left = "40px";
   }
 }
 
@@ -100,9 +115,10 @@ function redirectPageEczeemA(){
   if ( redirectSix.is(':checked') ) {
       window.location.href="overleg.html" ;
   } else {
-    window.location.href="www.ex.com" ;
-  }
+    Form5A.style.left = "-450px";
+    Form6A.style.left = "40px";  }
 }
+
 
 // Maar 1 vakje selecteren
 function selectOnlyThis(id) {
@@ -133,6 +149,22 @@ function selectOnlyThis3(id) {
   for (var i = 1;i <= 3; i++)
   {
       document.getElementById("CheckB" + i).checked = false;
+  }
+  document.getElementById(id).checked = true;
+}
+
+function selectOnlyThis4(id) {
+  for (var i = 1;i <= 3; i++)
+  {
+      document.getElementById("CheckEc" + i).checked = false;
+  }
+  document.getElementById(id).checked = true;
+}
+
+function selectOnlyThis5(id) {
+  for (var i = 1;i <= 3; i++)
+  {
+      document.getElementById("CheckEcA" + i).checked = false;
   }
   document.getElementById(id).checked = true;
 }

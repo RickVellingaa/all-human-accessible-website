@@ -9,3 +9,10 @@ step1.onclick = function () {
 crossIcon.onclick = function () {
     modalBox.style.display = 'none';
 }
+
+var bodyElHeight = document.getElementById('bodyEl').style.height;
+var bgImgHeight = document.getElementById('bgimg').style.height;
+
+if (bodyElHeight>bgImgHeight) {
+    bgImgHeight.style.height=bodyElHeight;  
+}

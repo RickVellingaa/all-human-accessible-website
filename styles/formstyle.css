@@ -7,10 +7,49 @@
     --vini-geel: #f4eb34;
 }
 
+body {
+    font-family: var(--txt-font);
+    font-weight: normal;
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: hidden;   
+    position: relative;
+    left: 0;
+    width: 100%;
+    top: 0;
+}
+
+
+/* Website achtergrond */
+body::after {
+    content: "";
+    opacity: .4;
+    min-height: 100%;
+    background: url('../assets/bg.svg');
+    background-position: top left;
+    background-size: cover;
+    background-repeat: repeat;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+
+.maincon{
+    height: calc(100vh - 16.5vh);
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
 .form-container{
     width: 360px;
     aspect-ratio: 1/1.4;
-    margin: 8% auto;
     background: #fff;
     border-radius: 10px;
     position: relative;
@@ -93,8 +132,9 @@ form button{
     font-family: var(--txt-font);
 }
 
-#form-two, #form-three, #form-four, #form-five, #form-fiveA, #form-six, #form-sixA{
+#form-two, #form-three, #form-four, #form-five, #form-fiveA, #form-six, #form-sixA, #form-seven, #form-sevenA, #form-eight{
     left: 450px;
+    visibility: hidden;
 }
 
 .step-row{

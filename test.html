@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro-v6/44659d9/css/all.min.css" rel="stylesheet" type="text/css"/>
 </head>
-<body>
+<body id="bodyEl">
     <nav class="navigation-bar">
         <div class="navigation-menu">
             <div class="navigation-logo">
@@ -29,144 +29,155 @@
             </div>
         </div>
     </nav>
-    <div class="form-container">
-     <form action="" id="form-one">
-      <h3>Hoe heet jouw mini?</h3>
-      <input type="text" name="name-field" placeholder="Naam" id="">
-      <div class="btn-box">
-        <button type="button" id="nextstep-1">Volgende</button>
-      </div>
-     </form>
+    <div class="maincon">
+      <div class="form-container">
+        <form action="" id="form-one">
+         <h3>Hoe heet jouw mini?</h3>
+         <input type="text" name="name-field" placeholder="Naam" id="">
+         <div class="btn-box">
+           <button type="button" id="nextstep-1">Volgende</button>
+         </div>
+        </form>
+   
+        <form id="form-two">
+         <h3>Wat is de geboorte datum van uw mini?</h3>
+         <input type="date" name="birth-field" placeholder="Naam" id="">
+         <div class="btn-box">
+           <button type="button" id="prevstep-1">Vorige</button>
+           <button type="button" id="nextstep-2">Volgende</button>
+         </div>
+        </form>
+   
+        <form id="form-three">
+         <h3>Is het je eerste kindje?</h3>
+         <section>
+           <input type="radio" id="Check1" checked onclick="selectOnlyThis(this.id)">
+           <label for="">Ja</label>
+         </section>
+         <section>
+           <input type="radio" id="Check2" onclick="selectOnlyThis(this.id)">
+           <label for="">Nee</label>
+         </section>
+         <div class="btn-box">
+           <button type="button" id="prevstep-2">Vorige</button>
+           <button type="button" id="nextstep-3">Volgende</button>
+         </div>
+        </form>
+   
+        <form id="form-four">
+         <h3>Hoe oud is jouw Mini?</h3>
+         <section>
+           <input type="radio" name="redirect1" checked id="Redirect1" onclick="selectOnlyThis1(this.id)">
+           <label for="">Jonger dan 4 maanden</label>
+         </section>
+         <section>
+           <input type="radio" name="redirect3" id="Redirect2" onclick="selectOnlyThis1(this.id)">
+           <label for="">Tussen de 4 en 6 maanden</label>
+         </section>
+         <section>
+           <input type="radio" name="redirect4" id="Redirect3" onclick="selectOnlyThis1(this.id)">
+           <label for="">Tussen de 6 en 8 maanden</label>
+         </section>
+         <section>
+           <input type="radio" name="redirect2" id="Redirect4" onclick="selectOnlyThis1(this.id)">
+           <label for="">Ouder dan 8 maanden</label>
+         </section>
+         <div class="btn-box">
+           <button type="button" id="prevstep-3">Vorige</button>
+           <button type="button" onclick="redirectPage()">Verstuur</button>
+         </div>
+        </form>
+   
+        <form id="form-five">
+         <h3>Heeft jouw Mini eerder een acute allergische reactie gehad?</h3>
+         <section>
+           <input type="radio" name="redirect5" id="CheckA1" checked onclick="selectOnlyThis2(this.id)">
+           <label for="">Ja</label>
+         </section>
+         <section>
+           <input type="radio" name="bbb" id="CheckA2" onclick="selectOnlyThis2(this.id)">
+           <label for="">Nee</label>
+         </section>
+         <section>
+           <input type="radio" name="redirect5" id="CheckA3" onclick="selectOnlyThis2(this.id)">
+           <label for="">Weet ik niet</label>
+         </section>
+         <div class="btn-box">
+           <button type="button" id="prevstep-4">Vorige</button>
+           <button type="button" onclick="redirectPageEczeem()">Volgende</button>
+         </div>
+        </form>
+   
+        <form id="form-fiveA">
+         <h3>Heeft jouw Mini eerder een acute allergische reactie gehad?</h3>
+         <section>
+           <input type="radio" name="redirect6" id="CheckB1" checked onclick="selectOnlyThis3(this.id)">
+           <label for="">Ja</label>
+         </section>
+         <section>
+           <input type="radio" name="aaa" id="CheckB2" onclick="selectOnlyThis3(this.id)">
+           <label for="">Nee</label>
+         </section>
+         <section>
+           <input type="radio" name="redirect6" id="CheckB3" onclick="selectOnlyThis3(this.id)">
+           <label for="">Weet ik niet</label>
+         </section>
+         <div class="btn-box">
+           <button type="button" id="prevstep-5">Vorige</button>
+           <button type="button" onclick="redirectPageEczeemA()">Volgende</button>
+         </div>
+        </form>
+   
+        <form id="form-six">
+         <h3>Eczeem A</h3>
+         <section>
+           <input type="radio" name="redirect7" id="CheckEc1" checked onclick="selectOnlyThis4(this.id)">
+           <label for="">Ja</label>
+         </section>
+         <section>
+           <input type="radio" name="aaa" id="CheckEc2" onclick="selectOnlyThis4(this.id)">
+           <label for="">Nee</label>
+         </section>
+         <div class="btn-box">
+           <button type="button" id="prevstep-6">Vorige</button>
+           <button type="button" onclick="redirectPageAllergic()">Volgende</button>
+         </div>
+        </form>
+   
+        <form id="form-sixA">
+         <h3>Eczeem B</h3>
+         <section>
+           <input type="radio" name="" id="CheckEcA1" checked onclick="selectOnlyThis5(this.id)">
+           <label for="">Ja</label>
+         </section>
+         <section>
+           <input type="radio" name="redirect8" id="CheckEcA2" onclick="selectOnlyThis5(this.id)">
+           <label for="">Nee</label>
+         </section>
+         <div class="btn-box">
+           <button type="button" id="prevstep-7">Vorige</button>
+           <button type="button" onclick="redirectPageAllergicA()">Volgende</button>
+         </div>
+        </form>
 
-     <form id="form-two">
-      <h3>Wat is de geboorte datum van uw mini?</h3>
-      <input type="date" name="birth-field" placeholder="Naam" id="">
-      <div class="btn-box">
-        <button type="button" id="prevstep-1">Vorige</button>
-        <button type="button" id="nextstep-2">Volgende</button>
-      </div>
-     </form>
-
-     <form id="form-three">
-      <h3>Is het je eerste kindje?</h3>
-      <section>
-        <input type="radio" id="Check1" checked onclick="selectOnlyThis(this.id)">
-        <label for="">Ja</label>
-      </section>
-      <section>
-        <input type="radio" id="Check2" onclick="selectOnlyThis(this.id)">
-        <label for="">Nee</label>
-      </section>
-      <div class="btn-box">
-        <button type="button" id="prevstep-2">Vorige</button>
-        <button type="button" id="nextstep-3">Volgende</button>
-      </div>
-     </form>
-
-     <form id="form-four">
-      <h3>Hoe oud is jouw Mini?</h3>
-      <section>
-        <input type="radio" name="redirect1" checked id="Redirect1" onclick="selectOnlyThis1(this.id)">
-        <label for="">Jonger dan 4 maanden</label>
-      </section>
-      <section>
-        <input type="radio" name="redirect3" id="Redirect2" onclick="selectOnlyThis1(this.id)">
-        <label for="">Tussen de 4 en 6 maanden</label>
-      </section>
-      <section>
-        <input type="radio" name="redirect4" id="Redirect3" onclick="selectOnlyThis1(this.id)">
-        <label for="">Tussen de 6 en 8 maanden</label>
-      </section>
-      <section>
-        <input type="radio" name="redirect2" id="Redirect4" onclick="selectOnlyThis1(this.id)">
-        <label for="">Ouder dan 8 maanden</label>
-      </section>
-      <div class="btn-box">
-        <button type="button" id="prevstep-3">Vorige</button>
-        <button type="button" onclick="redirectPage()">Verstuur</button>
-      </div>
-     </form>
-
-     <form id="form-five">
-      <h3>Heeft jouw Mini eerder een acute allergische reactie gehad?</h3>
-      <section>
-        <input type="radio" name="redirect5" id="CheckA1" checked onclick="selectOnlyThis2(this.id)">
-        <label for="">Ja</label>
-      </section>
-      <section>
-        <input type="radio" name="bbb" id="CheckA2" onclick="selectOnlyThis2(this.id)">
-        <label for="">Nee</label>
-      </section>
-      <section>
-        <input type="radio" name="redirect5" id="CheckA3" onclick="selectOnlyThis2(this.id)">
-        <label for="">Weet ik niet</label>
-      </section>
-      <div class="btn-box">
-        <button type="button" id="prevstep-4">Vorige</button>
-        <button type="button" onclick="redirectPageEczeem()">Volgende</button>
-      </div>
-     </form>
-
-     <form id="form-fiveA">
-      <h3>Heeft jouw Mini eerder een acute allergische reactie gehad?</h3>
-      <section>
-        <input type="radio" name="redirect6" id="CheckB1" checked onclick="selectOnlyThis3(this.id)">
-        <label for="">Ja</label>
-      </section>
-      <section>
-        <input type="radio" name="aaa" id="CheckB2" onclick="selectOnlyThis3(this.id)">
-        <label for="">Nee</label>
-      </section>
-      <section>
-        <input type="radio" name="redirect6" id="CheckB3" onclick="selectOnlyThis3(this.id)">
-        <label for="">Weet ik niet</label>
-      </section>
-      <div class="btn-box">
-        <button type="button" id="prevstep-5">Vorige</button>
-        <button type="button" onclick="redirectPageEczeemA()">Volgende</button>
-      </div>
-     </form>
-
-     <form id="form-six">
-      <h3>Eczeem A</h3>
-      <section>
-        <input type="radio" name="redirect7" id="CheckEc1" checked onclick="selectOnlyThis4(this.id)">
-        <label for="">Ja</label>
-      </section>
-      <section>
-        <input type="radio" name="aaa" id="CheckEc2" onclick="selectOnlyThis4(this.id)">
-        <label for="">Nee</label>
-      </section>
-      <section>
-        <input type="radio" name="redirect7" id="CheckEc3" onclick="selectOnlyThis4(this.id)">
-        <label for="">Weet ik niet</label>
-      </section>
-      <div class="btn-box">
-        <button type="button" id="prevstep-6">Vorige</button>
-        <button type="button" onclick="redirectPageAllergic()">Volgende</button>
-      </div>
-     </form>
-
-     <form id="form-sixA">
-      <h3>Eczeem B</h3>
-      <section>
-        <input type="radio" name="redirect8" id="CheckEcA1" checked onclick="selectOnlyThis5(this.id)">
-        <label for="">Ja</label>
-      </section>
-      <section>
-        <input type="radio" name="aaa" id="CheckEcA2" onclick="selectOnlyThis5(this.id)">
-        <label for="">Nee</label>
-      </section>
-      <section>
-        <input type="radio" name="redirect8" id="CheckEcA3" onclick="selectOnlyThis5(this.id)">
-        <label for="">Weet ik niet</label>
-      </section>
-      <div class="btn-box">
-        <button type="button" id="prevstep-7">Vorige</button>
-        <button type="button" onclick="redirectPageAllergicA()">Volgende</button>
-      </div>
-     </form>
-
+        <form id="form-eight">
+          <h3>Allergie B EC</h3>
+          <section>
+            <input type="radio" name="" id="CheckLast1" checked onclick="selectOnlyThis5(this.id)">
+            <label for="">Ja</label>
+          </section>
+          <section>
+            <input type="radio" name="redirect9" id="CheckLast2" onclick="selectOnlyThis5(this.id)">
+            <label for="">Nee</label>
+          </section>
+          <div class="btn-box">
+            <button type="button" id="prevstep-8">Vorige</button>
+            <button type="button" onclick="redirectPageLast()">Volgende</button>
+          </div>
+         </form>
+    
+   
+       </div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>

@@ -1,6 +1,6 @@
-# Client Case - Vini Mini
+# All Human - Vini Mini
 
-Link website: https://rickvellingaa.github.io/the-client-case/
+Link website: https://rickvellingaa.github.io/all-human-accessible-website/
 
 ## Inhoudsopgave
 
@@ -12,24 +12,23 @@ Link website: https://rickvellingaa.github.io/the-client-case/
 
 Voor Vini Mini heb ik de user story: "Als ouder wil ik bij het openen van Mijn Vini Mini persoonlijk advies behorende bij de betreffende dag kunnen lezen, zodat de kans op een allergische reactie bij mijn kind kleiner wordt." gekozen om te gaan maken. De website is te zien zodra de gebruiker inlogt op zijn/of haar persoonlijk Vini Mini account. Op de pagina kun je verschillende adviesen zien die zijn aangeraden voor die dag. 
 
-Onderaan op de website staan 5 verschillende blokken die naar verschillende gedeeltes van de website lijden, zoals bijvoorbeeld een Agenda, Dagboek, Feitjes of overige informatie pagina. De website is helemaal responsive op de navigatie balk na.
+Voor Vini Mini heb ik tijdens deze leertaak een test formulier gemaakt, zodat ouders kunnen testen/bekijken wat het best advies is/het best is om te doen met de omstandigheden. Het test formulier geeft resulaten op basis van de antwoorden van de gebruiker, dus je kan bijvoorbeeld een 6 of 3 stap process worden aangeraden of een overleg met je arts.
 
-Link website: https://rickvellingaa.github.io/the-client-case/
+Link website: https://rickvellingaa.github.io/all-human-accessible-website/
 
 ### Foto's opzet website
 
-![077fa1ca61d812de588a07a375d0cca0](https://user-images.githubusercontent.com/112856287/195430728-8ddac3df-6eb0-4b14-8d01-f339d1054a4a.png)
-![b36c2f3539af644f6b5f80ed69fd8351](https://user-images.githubusercontent.com/112856287/195430720-747e319e-d883-40ca-9671-08e9b598aa50.png)
+![image](https://user-images.githubusercontent.com/112856287/199609347-88ab97dc-e3fb-46d2-9304-308e502dc277.png)
+![image](https://user-images.githubusercontent.com/112856287/199609377-9ddda80d-fbba-4869-bfe2-5a0c236d3471.png)
 
 ## Kenmerken
 
-Bij het maken van de website heb ik gebruik gemaakt van HTML en CSS. In HTML heb ik zoveel mogelijk rekening gehouden met de semantiek van de website. Met CSS heb ik ervoor gezorgd dat de website een goede visuele hierarchie heeft door genoeg wit ruimtes te gebruiken en een goede kleuren combinatie te gebruiken in verband met de huisstijl van Vini Mini. De structuur van de website heb ik voor een groot gedeelte gemaakt door gebruik te maken van grid en flexbox. Met JS heb ik ervoor gezorgd dat ik een modal box kon laten zien/maken zodra je op een section klikte. Uiteindelijk heb ik met Procreate op mijn IPad een klein design op basis van hun stylebook en vervolgens met Photoshop het omgezet, zodat ik het design kon gebruiken als achtergrond.
+Bij het maken van het testformulier heb ik vooral heel veel gebruik gemaakt van JS. Ik heb in JS door middel van VAR en Functions een testformulier gemaakt die multi-step is door elke keer als de klant een bepaald antwoord geeft je op basis daar van wordt doorgestuurd naar een andere vraag of pagina, dit heb ik gedaan door veel verschillende if statements te gebruiken en bijvoorbeeld dus if .....is.(:checked) dan redirect naar .... Voor de rest heb ik de opzet van het testformulier gemaakt met HTML en CSS, met HTML had ik de website ingedeeld en met CSS stijl gegeven.
 
 * HTML
 * CSS
 * JS
-* Photoshop
-* IPad / Procreate
+* Schetsboekje
 
 ## Bronnen
 

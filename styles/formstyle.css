@@ -12,7 +12,7 @@ body {
     font-weight: normal;
     height: 100vh;
     max-height: 100vh;
-    overflow-x: hidden;   
+    overflow-x: hidden;
     position: relative;
     left: 0;
     width: 100%;
@@ -26,14 +26,14 @@ body {
 
 /* Website achtergrond */
 
-.maincon{
+.maincon {
     height: calc(100vh - 16.5vh);
     width: 100%;
     display: grid;
     place-content: center;
 }
 
-.form-container{
+.form-container {
     width: 360px;
     aspect-ratio: 1/1.4;
     border: 5px solid var(--vini-groen);
@@ -41,9 +41,10 @@ body {
     border-radius: 10px;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 20px 10px rgb(114 175 166 / 50%);}
+    box-shadow: 0 0 20px 10px rgb(114 175 166 / 50%);
+}
 
-h3{
+h3 {
     text-align: center;
     /* margin-bottom: 40px; */
     font-size: 1.3em;
@@ -52,7 +53,7 @@ h3{
 }
 
 
-.form-container form{
+.form-container form {
     width: 280px;
     display: flex;
     flex-direction: column;
@@ -65,7 +66,7 @@ h3{
     transition: .5s;
 }
 
-form input{
+form input {
     padding: 10px 5px;
     margin: 5px 0;
     border: 0;
@@ -74,7 +75,7 @@ form input{
     background: transparent;
 }
 
-#form-three input{
+#form-three input {
     padding: 10px 5px;
     margin: 3px 0;
     border: 0;
@@ -87,13 +88,13 @@ form input{
     background: transparent;
 }
 
-#form-three section{
+#form-three section {
     display: flex;
     flex-direction: row;
 }
 
 
-form button{
+form button {
     width: 110px;
     height: 35px;
     background: rgb(114, 175, 166, .4);
@@ -104,7 +105,7 @@ form button{
     font-family: var(--txt-font);
 }
 
-.btn-box{
+.btn-box {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -113,18 +114,27 @@ form button{
 }
 
 
-::placeholder{
+::placeholder {
     color: var(--txt-color);
     font-size: 1.2em;
     font-family: var(--txt-font);
 }
 
-#form-two, #form-three, #form-four, #form-five, #form-fiveA, #form-six, #form-sixA, #form-seven, #form-sevenA, #form-eight{
+#form-two,
+#form-three,
+#form-four,
+#form-five,
+#form-fiveA,
+#form-six,
+#form-sixA,
+#form-seven,
+#form-sevenA,
+#form-eight {
     left: 450px;
     visibility: hidden;
 }
 
-.step-row{
+.step-row {
     width: 360px;
     height: 40px;
     margin: 0 auto;
@@ -138,14 +148,14 @@ form button{
     outline: none;
 }
 
-.step-col{
+.step-col {
     width: 120px;
     text-align: center;
     color: var(--txt-color);
     position: relative;
 }
 
-#progress-bar{
+#progress-bar {
     position: absolute;
     height: 100%;
     width: 120px;
@@ -155,12 +165,12 @@ form button{
     outline: none;
 }
 
-input[type="radio" i]{
+input[type="radio"i] {
     width: 16px;
     height: 16px;
 }
 
-label{
+label {
     padding-left: 10px;
 }
 
@@ -169,9 +179,9 @@ label{
     position: absolute;
     left: -9999px;
 }
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
+
+[type="radio"]:checked+label,
+[type="radio"]:not(:checked)+label {
     position: relative;
     padding-left: 28px;
     cursor: pointer;
@@ -179,8 +189,9 @@ label{
     display: inline-block;
     color: var(--txt-color);
 }
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
+
+[type="radio"]:checked+label:before,
+[type="radio"]:not(:checked)+label:before {
     content: '';
     position: absolute;
     left: 0;
@@ -191,8 +202,9 @@ label{
     border-radius: 100%;
     background: rgb(114, 175, 166, .2);
 }
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
+
+[type="radio"]:checked+label:after,
+[type="radio"]:not(:checked)+label:after {
     content: '';
     width: 10px;
     height: 10px;
@@ -204,12 +216,14 @@ label{
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
 }
-[type="radio"]:not(:checked) + label:after {
+
+[type="radio"]:not(:checked)+label:after {
     opacity: 0;
     -webkit-transform: scale(0);
     transform: scale(0);
 }
-[type="radio"]:checked + label:after {
+
+[type="radio"]:checked+label:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);

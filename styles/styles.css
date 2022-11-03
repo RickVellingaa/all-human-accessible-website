@@ -11,6 +11,7 @@
     box-sizing: border-box;
     margin: 0;
     font-family: var(--txt-font);
+    font-weight: bold;
 }
 
 body {
@@ -364,7 +365,8 @@ body {
     .navigation-items ul:nth-child(5),
     .navigation-items ul:nth-child(6), 
     .navigation-items ul:nth-child(7),
-    .navigation-items ul:nth-child(8) {
+    .navigation-items ul:nth-child(8),
+    .navigation-items ul:last-child {
         display: none;
     }
 

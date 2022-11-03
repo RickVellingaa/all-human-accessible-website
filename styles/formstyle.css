@@ -101,7 +101,6 @@ form button{
     border: 3px solid var(--vini-groen);
     border-radius: 10px;
     cursor: pointer;
-    outline: none;
     font-family: var(--txt-font);
 }
 

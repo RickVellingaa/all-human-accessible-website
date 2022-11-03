@@ -27,7 +27,7 @@ body {
     background: url('../assets/bg.png');
     background-position: top left;
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
 }
 
 
@@ -110,6 +110,8 @@ body {
     grid-gap: 30px;
     grid-template-rows: 1fr;
 }
+
+
 
 .steps-advice section {
     /* background-color: red; */
@@ -239,7 +241,6 @@ body {
     position: relative;
     padding: 0;
     border: 10px solid var(--vini-groen);
-    outline: 0;
     background-color: white;
     width: 80vw;
     aspect-ratio: 2/1;
@@ -377,6 +378,10 @@ body {
         font-size: 25px;
         padding-right: 2rem;
     }
+
+    body{
+        background: none;
+    }
 }
 
 @media (max-width: 780px) {
@@ -388,11 +393,19 @@ body {
         width: 23rem;
     }
 
+    body{
+        background: none;
+    }
+
 }
 
 @media (max-width: 550px) {
     .box-advice {
         grid-template-columns: repeat(1, 1fr);
+    }
+
+    body{
+        background: none;
     }
 
     .steps-advice section {

@@ -10,6 +10,11 @@
     <link href="https://cdn.staticaly.com/gh/hung1001/font-awesome-pro-v6/44659d9/css/all.min.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
+    <style>
+        *{
+            overflow-y: hidden;
+        }
+    </style>
     <nav class="navigation-bar">
         <div class="navigation-menu">
             <div class="navigation-logo">
@@ -29,7 +34,17 @@
             </div>
         </div>
     </nav>
-    NOG TE JONG
+    <div class="pinda-container">
+        <div class="img-container">
+            <img class="overlegImg" src="./assets/overleg.png" alt="">
+        </div>
+        <div class="txt-container">
+            <h1>Jouw Mini is nog te klein voor het geven van hapjes.</h1>
+            <p>Pas vanaf 4 maanden kan dit; kom je dan terug voor de test? Laat je gegevens achter, zodat we jou op de hoogte kunnen houden.</p>
+            <button onclick="shopFunctionYoung();">Naar Vini Mini</button>
+        </div>
+        <div class="advice-container"></div>
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 <script src="./scripts/script.js"></script>

@@ -27,3 +27,7 @@ function shopFunction1 (){
 function shopFunctionAll (){
     window.location.href = "https://vinimini.nl/collections/all";
 }
+
+function shopFunctionYoung (){
+    window.location.href = "https://vinimini.nl/";
+}

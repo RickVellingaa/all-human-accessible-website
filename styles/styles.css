@@ -37,7 +37,6 @@ body {
     width: 100%;
     position: relative;
     overflow: auto;
-    height: 13vh;
     background-color: transparent;
     border-bottom: 2px solid var(--txt-color);
 }

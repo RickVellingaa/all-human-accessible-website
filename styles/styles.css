@@ -17,29 +17,20 @@ body {
     font-family: var(--txt-font);
     font-weight: normal;
     height: 100vh;
+    max-height: 100vh;
     overflow-x: hidden;   
     position: relative;
+    left: 0;
+    width: 100%;
+    top: 0;
+    background: url('../assets/bg.png');
+    background-position: top left;
+    background-size: cover;
+    background-repeat: repeat;
 }
 
 
 /* Website achtergrond */
-body::after {
-    content: "";
-    opacity: .4;
-    min-height: 100%;
-    background: url('../assets/bg.svg');
-    background-position: top left;
-    background-size: 120%;
-    background-repeat: repeat;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-}
 
 .navigation-bar {
     width: 100%;
